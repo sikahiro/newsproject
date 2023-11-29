@@ -151,8 +151,8 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
-          <h4><font color="yellow">News</font></h4>
-          <p><font color="yellow">newsを投稿しよう</font></p>
+          <h4><font color="yellow">ニュースサイト</font></h4>
+          <p><font color="yellow">ニュースを投稿しよう</font></p>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white"><font color="yellow">メニュー</font></h4>
@@ -161,11 +161,11 @@
             <li><a href="{% url 'news:mypage' %}" class="text-white"><font color="yellow">マイページ</font></a></li>
             <li><a href="{% url 'accounts:logout' %}" class="text-white"><font color="yellow">ログアウト</font></a></li>
             <li><a href="{% url 'password_reset' %}" class="text-white"><font color="yellow">パスワードのリセット</font></a></li>
-            <li><a href="mailto:admin@example.com" class="text-white"><font color="yellow">Eメール</font></a></li>
+            <li><a href="{% url 'news:contact' %}" class="text-white"><font color="yellow">お問い合わせ</font></a></li>
             {% else %}
             <li><a href="{% url 'accounts:signup' %}" class="text-white"><font color="yellow">サインアップ</font></a></li>
             <li><a href="{% url 'accounts:login' %}" class="text-white"><font color="yellow">ログイン</font></a></li>
-            <li><a href="mailto:admin@example.com" class="text-white"><font color="yellow">Eメール</font></a></li>
+            <li><a href="{% url 'news:contact' %}" class="text-white"><font color="yellow">お問い合わせ</font></a></li>
             {% endif %}
           </ul>
         </div>
@@ -193,7 +193,7 @@
 <footer class="text-body-secondary py-5">
   <div class="container">
     <p class="float-end mb-1">
-      <a href="{% url 'news:index' %}"><font color="blue">Back to top</font></a>
+      <a href="{% url 'news:index' %}"><font color="blue">トップへ戻る</font></a>
     </p>
     <p class="mb-1">ニュースサイト</p>
     

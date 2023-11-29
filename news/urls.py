@@ -13,5 +13,5 @@ urlpatterns=[
     path('news-detail/<int:pk>',views.DetailView.as_view(),name='news_detail'),
     path('mypage/',views.MypageView.as_view(),name='mypage'),
     path('news/<int:pk>/delete/',views.NewsDeleteView.as_view(),name='news_delete'),
-    # path('contact/',views.ContactView.as_view(),name='contact'),
+    path('contact/',views.ContactView.as_view(),name='contact'),
 ]
